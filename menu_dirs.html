@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mediachan Navigation</title>
+<link rel="stylesheet" type="text/css" href="http://www.vkowebs.com/mediachan/serissa1/css/site_oxygen.css" title="Oxygen">
+<link rel="stylesheet" type="text/css" href="http://www.vkowebs.com/mediachan/serissa1/css/sitemenu_oxygen.css" title="Oxygen">
+<link rel="alternate stylesheet" type="text/css" href="http://www.vkowebs.com/mediachan/serissa1/css/site_kusabax.css" title="Kusabax">
+<link rel="alternate stylesheet" type="text/css" href="http://www.vkowebs.com/mediachan/serissa1/css/sitemenu_kusabax.css" title="Kusabax">
+<script type="text/javascript"><!--
+	var style_cookie_site = "kustyle_site";
+//--></script>
+<script type="text/javascript" src="http://www.vkowebs.com/mediachan/serissa1/lib/javascript/kusaba.js"></script>
+<link rel="shortcut icon" href="http://www.vkowebs.com/mediachan/serissa1/favicon.ico">
+<script type="text/javascript"><!--
+function toggle(button, area) {
+	var tog=document.getElementById(area);
+	if(tog.style.display)    {
+		tog.style.display="";
+	}    else {
+		tog.style.display="none";
+	}
+	button.innerHTML=(tog.style.display)?'+':'&minus;';
+	set_cookie('nav_show_'+area, tog.style.display?'0':'1', 30);
+}
+function showstyleswitcher() {
+	var switcher = document.getElementById('sitestyles');
+	switcher.innerHTML = 'Styles: [<a href="#" onclick="javascript:set_stylesheet(\'Oxygen\', false, true);reloadmain();" style="display: inline;" target="_self">O<\/a>] [<a href="#" onclick="javascript:set_stylesheet(\'Kusabax\', false, true);reloadmain();" style="display: inline;" target="_self">K<\/a>]';
+}
+function removeframes() {
+	var boardlinks = document.getElementsByTagName("a");
+	for(var i=0;i<boardlinks.length;i++) if(boardlinks[i].className == "boardlink") boardlinks[i].target = "_top";
+	
+	document.getElementById("removeframes").innerHTML = 'Frames removed.';
+	
+	return false;
+}
+function reloadmain() {
+	if (parent.main) {
+		parent.main.location.reload();
+	}
+}
+function hidedirs() {
+	set_cookie('tcshowdirs', '', 30);
+	window.location = 'http://www.vkowebs.com/mediachan/serissa1/menu.html';
+}
+function showdirs() {
+	set_cookie('tcshowdirs', 'yes', 30);
+	window.location = 'http://www.vkowebs.com/mediachan/serissa1/menu_dirs.html';
+}
+//--></script>
+<base target="main">
+</head>
+<body>
+
+
+<h1>mediachan</h1>
+<ul>
+<li><a href="http://www.vkowebs.com/mediachan/serissa1" target="_top">Front Page</a></li>
+<li id="sitestyles"><a onclick="javascript:showstyleswitcher();" href="#" target="_self">[Site Styles]</a></li>
+<li><a onclick="javascript:hidedirs();" href="menu.html" target="_self">[Hide Directories]</a></li>
+<li id="removeframes"><a href="#" onclick="javascript:return removeframes();" target="_self">[Remove Frames]</a></li>
+</ul>
+<h2><span class="plus" onclick="toggle(this, 'mov');" title="Click to show/hide">&minus;</span>&nbsp;Movies</h2>
+<div id="mov" style="">
+<ul>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/com/" class="boardlink">/com/ - Comedy</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/crime/" class="boardlink">/crime/ - Crime</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/action/" class="boardlink">/action/ - Action</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/foreign/" class="boardlink">/foreign/ - Non-English</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/other/" class="boardlink">/other/ - Other</a></li>
+</ul>
+</div>
+<h2><span class="plus" onclick="toggle(this, 'TV');" title="Click to show/hide">&minus;</span>&nbsp;TV</h2>
+<div id="TV" style="">
+<ul>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/tv/" class="boardlink">/tv/ - TV - Random</a></li>
+</ul>
+</div>
+<h2><span class="plus" onclick="toggle(this, 'music');" title="Click to show/hide">&minus;</span>&nbsp;Music</h2>
+<div id="music" style="">
+<ul>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/metal/" class="boardlink">/metal/ - Metal</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/rap/" class="boardlink">/rap/ - Rap/Hip-Hop</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/rock/" class="boardlink">/rock/ - General Rock</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/rb/" class="boardlink">/rb/ - R&B</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/classical/" class="boardlink">/classical/ - Classical</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/instrumental/" class="boardlink">/instrumental/ - Instrumental</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/techno/" class="boardlink">/techno/ - Trance/Techno</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/rave/" class="boardlink">/rave/ - Rave</a></li>
+</ul>
+</div>
+<h2><span class="plus" onclick="toggle(this, 'games');" title="Click to show/hide">&minus;</span>&nbsp;Games</h2>
+<div id="games" style="">
+<ul>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/xbox/" class="boardlink">/xbox/ - Xbox/360</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/ps/" class="boardlink">/ps/ - PlayStation</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/nintendo/" class="boardlink">/nintendo/ - Nintendo</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/vintage/" class="boardlink">/vintage/ - Vintage</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/comp/" class="boardlink">/comp/ - Computers</a></li>
+</ul>
+</div>
+<h2><span class="plus" onclick="toggle(this, 'other');" title="Click to show/hide">&minus;</span>&nbsp;Other</h2>
+<div id="other" style="">
+<ul>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/b/" class="boardlink">/b/ - Random</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/ask/" class="boardlink">/ask/ - Ask the Mods/Requests</a></li>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/web/" class="boardlink">/web/ - Websites</a></li>
+</ul>
+</div>
+<h2><span class="plus" onclick="toggle(this, 'dev');" title="Click to show/hide">&minus;</span>&nbsp;devel</h2>
+<div id="dev" style="">
+<ul>
+	<li><a href="http://www.vkowebs.com/mediachan/serissa1/test/" class="boardlink"><i>/test/ - tests</i></a></li>
+</ul>
+</div>
+
+
+</body>
+</html>

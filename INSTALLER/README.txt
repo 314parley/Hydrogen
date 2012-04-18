@@ -1,0 +1,1 @@
+This installer should not be used if you are upgrading to Serissa from kusaba 1.0.4. Change the KU_PASSWORD in load_receiver immediately.
